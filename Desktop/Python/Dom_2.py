@@ -1,14 +1,7 @@
-from random import randit  
-number = int(input("Введите размер списка: "))
-list = []
-list2 = []
-for i in range(number):
-    list.append(randit(0,9))
-for i in range(len(list)):
-    While i < len(list)/2 and number > len(list)/2:
-    number = number - 1
-    a = list[i] * list[number]
-    list2.append(a)
-    i +=1
-print(list)
-print(list2)
+# Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
+list = list(map(int, input("Введите числа через пробел  ").split()))
+print(f"Исходный список {list}")
+list2= []
+[list2.append(i) for i in list if i not in list2]
+print(f"Список неповторяющихся элементов {list2}")
+# Не уверен, что правильно сделал, но вроде мыслил правильно.
